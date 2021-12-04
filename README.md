@@ -1,2 +1,3 @@
-# banana-speak
+# minion-speak
+
 Minion Language
