@@ -9,14 +9,20 @@ button.addEventListener("click", () => {
 });
 
 function getData(sentence) {
+  // https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json // test server api
+  // https://replit.com/@tanaypratap/lessonfourapi
   const url =
     "https://api.funtranslations.com/translate/minion.json?text=" + sentence;
 
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data.contents.translated);
-      output.textContent = data.contents.translated;
+      console.log(data);
+      if (data.error) {
+        output.textContent = data.error.message;
+      } else {
+        output.textContent = data.contents.translated;
+      }
     })
     .catch((err) => console.log(err));
 }

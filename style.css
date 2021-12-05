@@ -40,8 +40,7 @@ nav .nav-brand {
 footer {
   background-color: var(--primary-color);
   text-align: center;
-  padding: 2rem;
-  /* position: fixed; */
+  padding: 1rem;
   bottom: 0;
 }
 
